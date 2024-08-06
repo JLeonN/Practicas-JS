@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Tipografias */
+
+  /* Colores */
+  --fondoBody: #242424;
+
+  --texto: #fff;
+  --fondoNav: #333;
+  --boton: #1a1a1a;
+  --marron: #8b4513;
+  --hoverTexto: #ff0000;
+  --hoverBorde: #00ff00;
+}
+
+body{
+  background-color: var(--fondoBody);
+}
