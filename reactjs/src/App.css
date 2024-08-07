@@ -3,20 +3,103 @@
   padding: 0;
 }
 
+/* Variables CSS */
 :root {
   /* Tipografias */
 
   /* Colores */
-  --fondoBody: #242424;
-
-  --texto: #fff;
-  --fondoNav: #333;
-  --boton: #1a1a1a;
-  --marron: #8b4513;
-  --hoverTexto: #ff0000;
-  --hoverBorde: #00ff00;
+  --TituloH1: #4682b4;
+  --FondoBodyGradiente: linear-gradient(to bottom, #2a2d34, #1a1b1e);
+  --FondoModal: #000000bf;
+  --Texto: #d3d3d3;
+  --TextoLink: #5f9ea0;
+  --Secciones1Gradiente: linear-gradient(
+    to bottom,
+    #696969,
+    #5e5e5e,
+    #545454,
+    #4a4a4a,
+    #404040
+  );
+  --Secciones1: #696969;
+  --Secciones2: #708090;
+  --Secciones3: #2a2d34;
+  --Hover: #b22222;
 }
+/* --------------------------------------------------------------------------------------------------------------- */
 
-body{
-  background-color: var(--fondoBody);
+/* ---CSS general--- */
+
+/* ////////////////////////// */
+body {
+  background: var(--FondoModal);
+}
+/* ////////////////////////// */
+
+/* contenedor para slavarte la cabeza cuando tenes que centrar un puto div de mierda */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* ////////////////////////// */
+
+/* Los titulos o H... */
+.titulo {
+  text-align: center;
+  font-size: 1.9rem;
+  color: var(--Texto);
+  margin-top: 15px;
+}
+/* Responsividad 768px */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+}
+/* Responsividad 480px */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1rem;
+  }
+}
+/* ////////////////////////// */
+
+/* boton */
+.boton {
+  padding: 10px 15px;
+  background-color: var(--Secciones2);
+  color: var(--Texto);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+.boton:hover {
+  background-color: var(--Texto);
+  color: var(--Hover);
+}
+/* Responsividad 600px */
+@media (max-width: 600px) {
+  .detalleForm {
+    padding: 15px;
+  }
+  .grupoFormulario input,
+  .grupoFormulario textarea {
+    padding: 8px;
+  }
+  .boton {
+    padding: 8px 12px;
+  }
+}
+/* ////////////////////////// */
+
+.textoSimple{
+  color: var(--TextoLink);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  display: block;
 }
