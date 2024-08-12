@@ -96,10 +96,28 @@ body {
 }
 /* ////////////////////////// */
 
-.textoSimple{
+/* Simples <P> */
+.textoP {
   color: var(--TextoLink);
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
   display: block;
 }
+/* ////////////////////////// */
+
+/* Para el input */
+.texto {
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  border-bottom: 4px solid var(--Secciones2);
+  border-radius: 3px;
+  outline: none; /* Elimina el borde azul por defecto en algunos navegadores */
+  transition: background-color 0.3s ease;
+}
+input:hover {
+  border-bottom: 4px solid var(--Hover);
+  box-shadow: none;
+}
+/* ////////////////////////// */

@@ -14,7 +14,7 @@ function Contador() {
     <>
       <h2 className="titulo">Contador de Clics</h2>
       <section className="contenedor">
-        <p className="textoSimple">{contador}</p>
+        <p className="textoP">{contador}</p>
         <div>
           <button className="boton" onClick={sumaContador}>
             Sumar
