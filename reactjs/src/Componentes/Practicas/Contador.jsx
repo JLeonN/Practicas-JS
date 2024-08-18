@@ -9,6 +9,9 @@ function Contador() {
   const restaContador = () => {
     setContador(contador - 1);
   };
+  const resetContador = () => {
+    setContador(0);
+  };
 
   return (
     <>
@@ -21,6 +24,8 @@ function Contador() {
           </button>
           <button className="boton" onClick={restaContador}>
             Restar
+          </button><button className="boton" onClick={resetContador}>
+            Resetear
           </button>
         </div>
       </section>
