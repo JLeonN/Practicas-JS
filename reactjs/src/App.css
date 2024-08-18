@@ -121,3 +121,12 @@ input:hover {
   box-shadow: none;
 }
 /* ////////////////////////// */
+/* Para los ul */
+ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+}
+ul li {
+  padding: 5px;
+  color: var(--TextoLink);
+}
+/* ////////////////////////// */
