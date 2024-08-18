@@ -9,8 +9,10 @@ function Nombres() {
   const mostrarNombre = (evento) => {
     setNombreDato(evento.target.value);
   };
+
   // Cuando el usuario toca el botón, se muestra el nombre en pantalla.
-  const MostrarValor = () => {
+  const MostrarValor = (evento) => {
+    evento.preventDefault(); // Evita que el formulario recargue la página al presionar "Enter" o al hacer clic en el botón.
     if (nombreDato.trim() !== "") {
       // Verifica que el input no esté vacío
       setNombres([...nombres, nombreDato]); // Agrega el nuevo nombre al array
@@ -18,7 +20,7 @@ function Nombres() {
     }
     // La función trim() en JavaScript se utiliza para eliminar los espacios en blanco al principio y al final de una cadena de texto. No afecta los espacios en blanco que están en el medio de la cadena.
   };
-  
+
   // Función que se ejecuta cuando el usuario hace clic en "Sorteo"
   const realizarSorteo = () => {
     if (nombres.length > 0) {
@@ -32,19 +34,21 @@ function Nombres() {
     <div>
       <h2 className="titulo">Nombre</h2>
       <section className="contenedor">
-        <div>
-          <input
-            className="texto"
-            type="text"
-            placeholder="nombre"
-            value={nombreDato}
-            onChange={mostrarNombre}
-          />
-        </div>
+        <form className="contenedor" onSubmit={MostrarValor}>
+          <div>
+            <input
+              className="texto"
+              type="text"
+              placeholder="nombre"
+              value={nombreDato}
+              onChange={mostrarNombre}
+            />
+          </div>
 
-        <button className="boton" onClick={MostrarValor}>
-          Mostrar nombre
-        </button>
+          <button className="boton" type="submit">
+            Mostrar nombre
+          </button>
+        </form>
 
         <ul>
           {nombres.map((nombre, index) => (
@@ -55,7 +59,9 @@ function Nombres() {
         <button className="boton" onClick={realizarSorteo}>
           Sorteo
         </button>
-        <p className="textoP">Nombre ganador del sorteo: {nombreGanador || "..."}</p>
+        <p className="textoP">
+          Nombre ganador del sorteo: {nombreGanador || "..."}
+        </p>
       </section>
     </div>
   );
