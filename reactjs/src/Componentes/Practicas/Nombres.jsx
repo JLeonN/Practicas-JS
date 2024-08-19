@@ -50,9 +50,9 @@ function Nombres() {
           </button>
         </form>
 
-        <ul>
+        <ul className="lista">
           {nombres.map((nombre, index) => (
-            <li key={index}>{nombre}</li>
+            <li className="listaIten" key={index}>{nombre}</li>
           ))}
         </ul>
 

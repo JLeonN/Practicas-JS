@@ -122,10 +122,10 @@ input:hover {
 }
 /* ////////////////////////// */
 /* Para los ul */
-ul {
+.lista {
   list-style-type: none; /* Elimina los puntos de la lista */
 }
-ul li {
+.lista .listaIten {
   padding: 5px;
   color: var(--TextoLink);
 }
