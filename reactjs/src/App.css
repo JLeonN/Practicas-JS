@@ -130,3 +130,39 @@ input:hover {
   color: var(--TextoLink);
 }
 /* ////////////////////////// */
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* ---Nav--- */
+.nav {
+  background-color: var(--Secciones3);
+  width: 100%;
+}
+.navTamaño{
+  width: 600px;
+  margin: 0 auto;
+  padding: 5px 30px;
+  display: flex;
+}
+.navTitulo {
+  color: var(--Secciones2);
+}
+.navSpan {
+  text-decoration: underline;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+.navSpan:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--Hover);
+  cursor: pointer;
+}
+.enlacesUl {
+  display: flex;
+  margin-left: auto; /* Derecha */
+}
+.enlacesLi{
+  color: var(--TextoLink);
+  cursor: pointer;
+  padding: 0 20px; /* 0 arriba y abajo, 20px - derecha - izquierda */
+}
+/* --------------------------------------------------------------------------------------------------------------- */
