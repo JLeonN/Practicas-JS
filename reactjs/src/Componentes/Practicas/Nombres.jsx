@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Buscador from "./Buscador";
 
 function Nombres() {
   const [nombreDato, setNombreDato] = useState(""); // Valor actual del input
@@ -52,7 +53,9 @@ function Nombres() {
 
         <ul className="lista">
           {nombres.map((nombre, index) => (
-            <li className="listaIten" key={index}>{nombre}</li>
+            <li className="listaIten" key={index}>
+              {nombre}
+            </li>
           ))}
         </ul>
 
@@ -62,6 +65,9 @@ function Nombres() {
         <p className="textoP">
           Nombre ganador del sorteo: {nombreGanador || "..."}
         </p>
+
+        {/* Buscador  */}
+        <Buscador nombres={nombres} />
       </section>
     </div>
   );
