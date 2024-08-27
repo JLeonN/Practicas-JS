@@ -42,7 +42,7 @@ function Buscador({ nombres }) {
       {/* Lista donde se ve lo buscado */}
       <ul className="lista">
         {nombres
-          .sort(() => Math.random() - 0.5) // Mezcla aleatoriamente el array
+          .toSorted(() => Math.random() - 0.5) // Mezcla aleatoriamente el array
           .slice(0, 3) // Selecciona los primeros 3 elementos del array mezclado
           .map((nombre, index) => (
             <li className="listaIten" key={index}>
