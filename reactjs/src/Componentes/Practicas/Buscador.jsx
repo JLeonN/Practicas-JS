@@ -2,26 +2,29 @@ import React, { useState } from "react";
 
 function Buscador({ nombres }) {
   const [nombreBuscado, setNombreBuscado] = useState("");
-  const [resultadoBusqueda, setResultadoBusqueda] = useState(""); // Para mostrar el resultado
+  const [resultadoBusqueda, setResultadoBusqueda] = useState([]); // Para mostrar el resultado
 
   // Función de búsqueda
   const buscando = (evento) => {
     const valor = evento.target.value;
     setNombreBuscado(valor);
+
     // Si el input esta vacio
     if (valor === "") {
-      setResultadoBusqueda("Escribe un nombre para buscar.");
+      setResultadoBusqueda(["Escribe un nombre para buscar."]);
       return;
     }
-    // Buscado coincide con algun nombre en la lista
-    const coincidencia = nombres.find((nombre) =>
+
+    // Buscar coincidencias en la lista de nombres
+    const coincidencias = nombres.filter((nombre) =>
       nombre.toLowerCase().includes(valor.toLowerCase())
     );
+
     // Muestra el resultado dependiendo de si hay coincidencia o no
-    if (coincidencia) {
-      setResultadoBusqueda(`Nombre encontrado: ${coincidencia}`);
+    if (coincidencias.length > 0) {
+      setResultadoBusqueda(coincidencias.slice(0, 3)); // Primeras 3 coincidencias
     } else {
-      setResultadoBusqueda("No se encontro ninguna coincidencia.");
+      setResultadoBusqueda(["No se encontró ninguna coincidencia."]);
     }
   };
 
@@ -37,9 +40,18 @@ function Buscador({ nombres }) {
         onChange={buscando}
       />
 
-      <p className="textoP">{resultadoBusqueda}</p>
+      {/* Mostrar resultados de búsqueda en una lista */}
+      <p className="textoP">Lista de 3 coincidencias</p>
+      <ul className="lista">
+        {resultadoBusqueda.map((resultado, index) => (
+          <li className="listaIten" key={index}>
+            {resultado}
+          </li>
+        ))}
+      </ul>
 
-      {/* Lista donde se ve lo buscado */}
+      {/* Lista mezcla aleatoriamente */}
+      <p className="textoP">Lista mezcla aleatoriamente</p>
       <ul className="lista">
         {nombres
           .toSorted(() => Math.random() - 0.5) // Mezcla aleatoriamente el array
