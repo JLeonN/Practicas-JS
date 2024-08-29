@@ -45,6 +45,15 @@ body {
 }
 /* ////////////////////////// */
 
+/* Un cuadrado */
+.cuadrado {
+  background-color: var(--Secciones1);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 20px;
+}
+/* ////////////////////////// */
+
 /* Los titulos o H... */
 .titulo {
   text-align: center;
@@ -137,7 +146,7 @@ input:hover {
   background-color: var(--Secciones3);
   width: 100%;
 }
-.navTamaño{
+.navTamaño {
   width: 600px;
   margin: 0 auto;
   padding: 5px 30px;
@@ -160,7 +169,7 @@ input:hover {
   display: flex;
   margin-left: auto; /* Derecha */
 }
-.enlacesLi{
+.enlacesLi {
   color: var(--TextoLink);
   cursor: pointer;
   padding: 0 20px; /* 0 arriba y abajo, 20px - derecha - izquierda */

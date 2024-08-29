@@ -30,25 +30,27 @@ function Buscador({ nombres }) {
 
   return (
     <>
-      <h2 className="titulo">Buscador</h2>
+      <div className="contenedor cuadrado">
+        <h2 className="titulo">Buscador</h2>
 
-      <input
-        className="texto"
-        type="text"
-        placeholder="Buscar"
-        value={nombreBuscado}
-        onChange={buscando}
-      />
+        <input
+          className="texto"
+          type="text"
+          placeholder="Buscar"
+          value={nombreBuscado}
+          onChange={buscando}
+        />
 
-      {/* Mostrar resultados de búsqueda en una lista */}
-      <p className="textoP">Lista de 3 coincidencias</p>
-      <ul className="lista">
-        {resultadoBusqueda.map((resultado, index) => (
-          <li className="listaIten" key={index}>
-            {resultado}
-          </li>
-        ))}
-      </ul>
+        {/* Mostrar resultados de búsqueda en una lista */}
+        <p className="textoP">Lista de 3 coincidencias</p>
+        <ul className="lista">
+          {resultadoBusqueda.map((resultado, index) => (
+            <li className="listaIten" key={index}>
+              {resultado}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       {/* Lista mezcla aleatoriamente */}
       <p className="textoP">Lista mezcla aleatoriamente</p>
