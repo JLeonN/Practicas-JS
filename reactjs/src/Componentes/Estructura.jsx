@@ -1,16 +1,20 @@
 import Inicio from "./Paginas/Inicio";
 import Contador from "./Practicas/Contador";
 import Nombres from "./Practicas/Nombres";
+import { Route, Routes } from 'react-router-dom';
 
 function Estructura() {
   return (
     <>
-      {/* Inicio */}
-      {/* <Inicio /> */}
+        <Routes>
+          {/* Inicio */}
+          <Route path="/" element={<Inicio />} />
+          {/* <Inicio /> */}
 
-      {/* Practicas */}
-      <Contador />
-      <Nombres />
+          {/* Practicas */}
+          <Route path="Contador" element={<Contador />} />
+          <Route path="Nombres" element={<Nombres />} />
+        </Routes>
     </>
   );
 }

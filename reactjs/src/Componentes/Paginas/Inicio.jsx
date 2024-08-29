@@ -1,5 +1,5 @@
 function Inicio() {
-  return <div>Inicio</div>;
+  return <p className="textoP">Inicio</p>;
 }
 
 export default Inicio;

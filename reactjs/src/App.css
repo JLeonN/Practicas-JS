@@ -139,6 +139,13 @@ input:hover {
   color: var(--TextoLink);
 }
 /* ////////////////////////// */
+
+/* ---Eliminar estilos predeterminados de Link--- */
+a {
+  text-decoration: none;
+  color: inherit; /* Mantiene el color definido en .enlacesLi */
+}
+/* ////////////////////////// */
 /* --------------------------------------------------------------------------------------------------------------- */
 
 /* ---Nav--- */
