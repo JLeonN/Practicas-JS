@@ -69,3 +69,17 @@ function Buscador({ nombres }) {
 }
 
 export default Buscador;
+
+// ASPECT 970
+// ASPECT 940
+// ASPECT 770
+// ROCKET 20
+// KODIAK 24
+// SIENA 26
+// IPANEMA LADY 26/6VEL
+// LIBERTY 26/6VEL
+// IPANEMA LADY 26
+// BAMBINO DLX 20
+// BALANCE
+// E-STRADA
+// MOB 29

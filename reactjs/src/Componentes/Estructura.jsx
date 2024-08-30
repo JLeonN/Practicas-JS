@@ -1,6 +1,6 @@
 import Inicio from "./Paginas/Inicio";
 import Contador from "./Practicas/Contador";
-import Nombres from "./Practicas/Nombres";
+import Nombres from "./Practicas/GestorDeNombres/Nombres";
 import { Route, Routes } from 'react-router-dom';
 
 function Estructura() {
