@@ -21,6 +21,9 @@ function Nav() {
             <li className="enlacesLi">
               <Link to="Nombres">Nombres</Link>
             </li>
+            <li className="enlacesLi">
+              <Link to="Tareas">Tareas</Link>
+            </li>
           </ul>
         </div>
       </nav>
